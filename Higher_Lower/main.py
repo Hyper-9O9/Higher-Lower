@@ -17,14 +17,14 @@ def compare(option_A, option_B, player_choice):
         else:
             return False
 
+
 in_game = False
 player_score = 0
 
-#print(f"Your current score is {player_score}")
+option_A = choice(data)
 
 while not in_game:
     # initializing the variables to compare
-    option_A = choice(data)
     option_B = choice(data)
 
     # checking if the two options are not the same
@@ -58,6 +58,7 @@ while not in_game:
     # if true increase score and keep on playing
     if compare(option_A= option_A, option_B= option_B, player_choice= player_input) is True:
         os.system('cls')
+        option_A = option_B
         player_score += 1
     # if false end game
     else:
